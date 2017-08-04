@@ -1,0 +1,106 @@
+# Module
+
+snippet 5req "Require module" b
+const ${1} = require('${2}');${0}
+endsnippet
+
+# ESLint
+snippet esdl "ESLint disable line" b
+// eslint-disable-line
+endsnippet
+
+snippet esnl "ESLint disable next line" b
+// eslint-disable-next-line
+endsnippet
+
+snippet esin "ESLint disable no-extraneous-dependencies" b
+/* eslint import/no-extraneous-dependencies: 0 */
+endsnippet
+
+# ReactJS
+
+snippet rcx "Extends React.Component" b
+import React, { Component } from 'react';
+
+class ${1} extends React.Component {
+	render() {
+		return (
+			$2
+		);
+	}
+}
+endsnippet
+
+snippet ren "render"
+render() {
+	return (
+		${1:<div />}
+	);
+}$0
+endsnippet
+
+snippet sst "Set state" b
+this.setState({
+	${1}: ${2}
+})$0
+endsnippet
+
+snippet scu "Should component update"
+shouldComponentUpdate(nextProps, nextState) {
+	${1}
+}$0
+endsnippet
+
+snippet props "Get property" i
+this.props.${1}
+endsnippet
+
+snippet state "Get state" i
+this.state.${1}
+endsnippet
+
+snippet con "Constructor for React.Component"
+constructor(props, ${1:context}) {
+	super(props, ${1/\w+\s*/$0/})
+}$0
+endsnippet
+
+snippet cdm "Component did mount" b
+componentDidMount() {
+	${1}
+}$0
+endsnippet
+
+snippet cdup "Component did update" b
+componentDidUpdate(prevProps, prevState) {
+	${1}
+}$0
+endsnippet
+
+snippet cwm "Component will mount" b
+componentWillMount() {
+	${1}
+}$0
+endsnippet
+
+snippet cwr "Component will receive props" b
+componentWillReceiveProps(nextProps) {
+	${1}
+}$0
+endsnippet
+
+snippet cwun "Component will unmount" b
+componentWillUnmount() {
+	${1}
+}$0
+endsnippet
+
+snippet cwu "Component will update" b
+componentWillUpdate(nextProps, nextState) {
+	${1}
+}$0
+endsnippet
+
+snippet fup "Force update"
+forceUpdate(${1:callback})
+endsnippet
